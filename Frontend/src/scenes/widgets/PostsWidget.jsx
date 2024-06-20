@@ -20,7 +20,7 @@ const PostsWidget = ({ userId, loggedUserId, userProfilePicture, isProfile = fal
 
   const getUserPosts = async () => {
     const response = await fetch(
-      'https://taskback-0l0h.onrender.com/posts/${userId}/posts',
+      `https://taskback-0l0h.onrender.com/posts/${userId}/posts`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

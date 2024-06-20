@@ -4,7 +4,7 @@ const baseUrl = process.env.REACT_APP_SOCIAL_CIRCLE_BACKEND;
 
 const getAllComment = (setComment, token, postId) => {
     axios
-        .get(`http://localhost:3001/comments/${postId}`, {
+        .get(`https://taskback-0l0h.onrender.com/comments/${postId}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
                 "Content-Type": "application/json",
@@ -19,7 +19,7 @@ const getAllComment = (setComment, token, postId) => {
 const handleDelete = async (_id, token, setComment) => {
     axios({
         method: "DELETE",
-        url: `http://localhost:3001/comments/${_id}/delete`,
+        url: `https://taskback-0l0h.onrender.com/comments/${_id}/delete`,
         headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
@@ -38,7 +38,7 @@ const handleDelete = async (_id, token, setComment) => {
 const handleUpdate = async (commentId, token, commentBody, setCommentBody, setComment, setIsUpdating) => {
     axios({
         method: "PATCH",
-        url: `http://localhost:3001/comments/${commentId}/update`,
+        url: `https://taskback-0l0h.onrender.com/comments/${commentId}/update`,
         headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",

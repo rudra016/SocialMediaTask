@@ -28,7 +28,7 @@ const MyComment = ({ location, postId, picturePath, commentBody, setCommentBody,
                 description: commentBody,
             };
 
-            await axios.post('http://localhost:3001/comments/:postId/create', data, {
+            await axios.post('https://taskback-0l0h.onrender.com/comments/:postId/create', data, {
                 headers: {
                     "Authorization": `Bearer ${token}`,
                 },

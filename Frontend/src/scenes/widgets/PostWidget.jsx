@@ -57,7 +57,7 @@ const PostWidget = ({
   const primary = palette.primary.main
 
   const patchLike = async () => {
-    const response = await fetch(`http://localhost:3001/posts/${postId}/like`, {
+    const response = await fetch(`https://taskback-0l0h.onrender.com/posts/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -70,7 +70,7 @@ const PostWidget = ({
   };
 
   const handleDeletePost = async () => {
-    const response = await fetch(`http://localhost:3001/posts/${postId}/delete`, {
+    const response = await fetch(`https://taskback-0l0h.onrender.com/posts/${postId}/delete`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,

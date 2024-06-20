@@ -10,7 +10,7 @@ const PostsWidget = ({ userId, loggedUserId, userProfilePicture, isProfile = fal
   const baseUrl = process.env.REACT_APP_SOCIAL_CIRCLE_BACKEND;
 
   const getPosts = async () => {
-    const response = await fetch(`${baseUrl}/posts`, {
+    const response = await fetch('https://taskback-0l0h.onrender.com/posts', {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -20,7 +20,7 @@ const PostsWidget = ({ userId, loggedUserId, userProfilePicture, isProfile = fal
 
   const getUserPosts = async () => {
     const response = await fetch(
-      `${baseUrl}/posts/${userId}/posts`,
+      'https://taskback-0l0h.onrender.com/posts/${userId}/posts',
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

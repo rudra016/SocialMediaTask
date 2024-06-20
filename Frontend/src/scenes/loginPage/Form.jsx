@@ -162,7 +162,7 @@ const Form = () => {
 
         await axios({
             method: "POST",
-            url: 'http://localhost:3001/auth/register',
+            url: 'https://taskback-0l0h.onrender.com/auth/register',
             headers: {
                 "Content-Type": "multipart/form-data", // Change content type for file upload
             },
@@ -186,7 +186,7 @@ const Form = () => {
 
         axios({
             method: "POST",
-            url: 'http://localhost:3001/auth/login',
+            url: 'https://taskback-0l0h.onrender.com/auth/login',
             headers: { "Content-Type": "application/json" },
             data: user,
         }).then((res) => {

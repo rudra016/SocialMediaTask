@@ -16,7 +16,7 @@ const FriendListWidget = ({ userId }) => {
 
   const getFriends = async () => {
     const response = await fetch(
-      'https://taskback-0l0h.onrender.com/users/${userId}/friends',
+      `${baseUrl}/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
